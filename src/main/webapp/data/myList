@@ -1,0 +1,33 @@
+{"code":"1","msg":"操作成功",
+	"data":{
+		"pagesize":10,"cpage":5,"totoleSize":100,"pagecount":10,
+		"list":[ 
+			{
+				"id":1,
+				"name":"出国旅游",
+				"imgurl":"./img/1.jpg"
+			},
+			{
+				"id":2,
+				"name":"自拍",
+				"imgurl":"./img/2.jpg"
+			},
+			{
+				"id":3,
+				"name":"自拍",
+				"imgurl":"./img/3.jpg"
+			},
+			{
+				"id":4,
+				"name":"出国旅游",
+				"imgurl":"./img/4.jpg"
+			},
+			{
+				"id":5,
+				"name":"出国旅游",
+				"imgurl":"./img/5.jpg"
+			}
+			
+		]
+	}
+}

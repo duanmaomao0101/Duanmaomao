@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css">
+<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body ng-app="app1" ng-controller="login" class="container">
+  <div class="text-center" style="margin-top: 200px" align="center">
+     <div class="col-sm-10">
+      <input type="text" class="form-control" id="firstname" placeholder="请输入相册名字"><br>
+     </div>
+     <div class="col-sm-10">
+     <textarea class="form-control" rows="5" placeholder="请输入相册简介"></textarea><br>
+     </div>
+     
+     <div class="col-sm-offset-2 col-sm-10">
+      <button class="btn btn-default" onclick="qr()">确认</button>
+    </div>
+  
+  </div>
+</body>
+<script type="text/javascript">
+function qr() {
+	alert("创建成功!")
+	location.href="xclb.html"
+}
+</script>
+<script type="text/javascript">
+  var app=angular.module('app1',[]);
+  app.controller('login',function($scope){
+	  
+  });
+</script>
+</html>

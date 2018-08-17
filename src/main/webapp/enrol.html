@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+</head>
+<body ng-app="app1" ng-controller="enrol" class="container text-center">
+  <div class="nav-top row">
+			<div class="col-xs-3"></div>
+			<div class="col-xs-6 nav-title">推荐页面 </div>
+			
+	</div>
+
+   
+	<div class="main row">
+	
+		<div class="col-xs-12 col-sm-6" ng-repeat="a in list">
+			<a href="zhoutu.html">
+				<img src="{{a.imgurl}}">
+				<div>{{a.name}}</div>
+			</a>
+		</div>
+		
+		<div><a href="javascript:void(0);" class="btn btn-success" ng-click="getPage(cp+1)">加载更多</a></div>
+		
+	</div>
+   
+   <div class="nav-bottom row">
+		<div class="nav-bottom-item col-xs-3">
+			<div class="nav-icon iconfont icon-md">&#xe618;</div><a href="enrol.html">首页</a>
+		</div>
+		<div class="nav-bottom-item col-xs-3 nav-bottom-item-selected">
+			<div class="nav-icon iconfont icon-md">&#xe60d;</div><a href="mytu.html">相册</a>
+		</div>
+		<div class="nav-bottom-item col-xs-3" >
+			<div class="nav-icon iconfont icon-md">&#xe603;</div><a href="">信息</a>
+		</div>
+		<div class="nav-bottom-item col-xs-3">
+			<div class="nav-icon iconfont icon-md">&#xe629;</div><a href="my.html">我的</a>
+		</div>
+	</div>
+</body>
+<link rel="stylesheet" href="./css/app.css">
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css">
+<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+<script>
+var host="./data";
+var app = angular.module('app1', []);
+app.controller('enrol', function($scope,$http) {
+	$scope.cp=1;
+	$scope.list=[];//保存所有数据
+	$scope.getPage=function(p){
+		$scope.cp=p;
+		$http({
+		    method: 'GET',
+		    url: host+'/myList'
+		}).then(function successCallback(res) {
+			$scope.list=$scope.list.concat(res.data.data.list);
+		    }, function errorCallback(resp) {
+		        // 请求失败执行代码
+		});
+		/* var page={"code":"1","msg":"操作成功",
+				"data":{
+					pagesize:10,cpage:5,totoleSize:100,pagecount:10,
+					list:[//真实数据
+						{
+							id:1,
+							name:"出国旅游",
+							imgurl:"../static/Chrysanthemum.jpg"
+						},
+						{
+							id:2,
+							name:"自拍",
+							imgurl:"../static/Chrysanthemum.jpg"
+						},
+					]
+				}
+			}; */
+		
+	}
+	
+	$scope.getPage(1);
+});
+</script>
+
+</html>

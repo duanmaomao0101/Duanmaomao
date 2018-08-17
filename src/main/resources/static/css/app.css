@@ -1,0 +1,71 @@
+	/**顶部导航**/
+	.nav-top{
+		height:30px;
+		background:#eee;
+		position: fixed;/**一旦定为浮动 自身的空间就从文档流脱离了**/
+		width:100%;
+		Z-index:99;
+		border-bottom:1px solid #bbb;
+	}
+	.nav-top .nav-title{
+		font-size:16px;
+		font-weight: bold;
+		line-height: 30px;	
+	}
+	.nav-top .text-left{
+		line-height: 30px;
+	}
+	.nav-top .text-left a{
+		color: #000;
+	}
+	/**主内容区域**/
+	.main{
+		padding-top:45px;
+		padding-bottom:80px;
+	}
+	.main img{
+		height:180px;
+	}
+
+	/**底部导航**/
+	.nav-bottom{
+		border-top:1px solid #bbb;
+		height:56px;
+		background:#eee;
+	    position: fixed;
+   		bottom: 0px;
+   		width:100%;
+	}
+	.nav-bottom-item{
+		cursor: pointer;
+	}
+	.nav-bottom-item-selected{
+		    background: #cde;
+    		font-weight: bold;
+	}
+	
+	
+	
+	/**字体图标**/
+	
+      @font-face {
+		  font-family: 'iconfont';  /* project id 797982 */
+		  src: url('//at.alicdn.com/t/font_797982_kmqx77z2ymk.eot');
+		  src: url('//at.alicdn.com/t/font_797982_kmqx77z2ymk.eot?#iefix') format('embedded-opentype'),
+		  url('//at.alicdn.com/t/font_797982_kmqx77z2ymk.woff') format('woff'),
+		  url('//at.alicdn.com/t/font_797982_kmqx77z2ymk.ttf') format('truetype'),
+		  url('//at.alicdn.com/t/font_797982_kmqx77z2ymk.svg#iconfont') format('svg');
+		}
+
+       .iconfont {
+         font-family:"iconfont" !important;
+         font-size:16px;
+         font-style:normal;
+         -webkit-font-smoothing: antialiased;
+         -webkit-text-stroke-width: 0.2px;
+         -moz-osx-font-smoothing: grayscale;
+       }
+       .icon-md{
+       	 font-size: 26px;
+       }
+	

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css">
+<script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body ng-app="app1" ng-controller="login" class="container text-center">
+<br>
+<br>
+<br>
+   <div>
+     <button onclick="xc()">相册管理</button>
+   </div><br>
+   
+   <div >
+    <button onclick="cj()">创建相册</button>
+   </div><br>
+   
+</body>
+<script type="text/javascript">
+  function xc() {
+	  location.href="xclb.html"
+	/* location.href="xcgl.html" */
+  }
+  
+  function cj() {
+	location.href="cjxc.html"
+  }
+
+</script>
+<style>
+   .header{
+      background:#ddd;height:26px;
+    }
+   .album-one img{
+      hight:100px;border:1px solid #cdc;
+    }
+   .album-one span{
+      display:block
+    }
+</style>
+<script type="text/javascript">
+  var app=angular.module('app1',[]);
+  app.controller('login',function($scope){
+	  
+  });
+</script>
+</html>
